@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, DatePickerIOS } from 'react-native';
-
 export default class HomeScreen extends React.Component {
 
   constructor() {
@@ -27,6 +26,7 @@ export default class HomeScreen extends React.Component {
     event.preventDefault();
     console.log('Trip location:', this.state.location);
     console.log('Return time:', this.state.time);
+    this.props.navigation.navigate('TripScreen');
   }
 
   render() {

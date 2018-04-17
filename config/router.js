@@ -7,7 +7,13 @@ import Profile from '../screens/Profile';
 import Contacts from '../screens/Contacts';
 
 
-export const Trip = StackNavigator({
+export const TripStack = StackNavigator({
+  HomeScreen: {
+    screen: HomeScreen,
+    navigationOptions: {
+      tabBarLabel: 'HomeScreen'
+    },
+  },
   TripScreen: {
     screen: TripScreen,
     navigationOptions: ({ navigation }) => ({
@@ -23,10 +29,10 @@ export const Trip = StackNavigator({
 });
 
 export const Tabs = TabNavigator({
-  HomeScreen: {
-    screen: HomeScreen,
+  TripStack: {
+    screen: TripStack,
     navigationOptions: {
-      tabBarLabel: 'HomeScreen'
+      tabBarLabel: 'Home'
     },
   },
   Profile: {
