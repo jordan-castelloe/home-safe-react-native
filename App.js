@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, DatePickerIOS } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
+class HomeScreen extends React.Component {
 
   constructor() {
     super();
@@ -56,3 +57,10 @@ const styles = StyleSheet.create({
     flex: 1
   },
 });
+
+
+export default StackNavigator({
+  Home: {
+    screen: HomeScreen
+  }
+})
